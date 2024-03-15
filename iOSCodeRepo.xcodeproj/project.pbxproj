@@ -13,6 +13,8 @@
 		F627603B28FD561E004E391C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F627603A28FD561E004E391C /* Preview Assets.xcassets */; };
 		F627604328FD563F004E391C /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627604228FD563F004E391C /* Color+.swift */; };
 		F6B16ED42B0B99DF009008F5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B16ED32B0B99DF009008F5 /* UIView+.swift */; };
+		F6DBDF742B9C563900A5BACA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF732B9C563900A5BACA /* Functions.swift */; };
+		F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */; };
 		F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAD222295AE35600D3C843 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		F627603A28FD561E004E391C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F627604228FD563F004E391C /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		F6B16ED32B0B99DF009008F5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		F6DBDF732B9C563900A5BACA /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		F6EAD222295AE35600D3C843 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +63,8 @@
 			children = (
 				F627603328FD561E004E391C /* iOSCodeRepoApp.swift */,
 				F627603528FD561E004E391C /* ContentView.swift */,
+				F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */,
+				F6DBDF732B9C563900A5BACA /* Functions.swift */,
 				F627604128FD562F004E391C /* Extension */,
 				F627603728FD561E004E391C /* Assets.xcassets */,
 				F627603928FD561E004E391C /* Preview Content */,
@@ -112,7 +118,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					F627602F28FD561E004E391C = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -156,9 +162,11 @@
 			files = (
 				F627603628FD561E004E391C /* ContentView.swift in Sources */,
 				F627604328FD563F004E391C /* Color+.swift in Sources */,
+				F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */,
 				F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */,
 				F627603428FD561E004E391C /* iOSCodeRepoApp.swift in Sources */,
 				F6B16ED42B0B99DF009008F5 /* UIView+.swift in Sources */,
+				F6DBDF742B9C563900A5BACA /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +209,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -261,6 +270,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
