@@ -32,12 +32,11 @@ func imageOfSize(_ size: CGSize, _ opaque: Bool = false, _ scale: Float = 0, _ w
     return result!
 }
 
-// A delay function
 func delay(seconds: Double, completion:@escaping ()->()) {
-    let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
-    DispatchQueue.main.asyncAfter(deadline: popTime) {
-        completion()
-    }
+  let popTime = DispatchTime.now() + seconds
+  DispatchQueue.main.asyncAfter(deadline: popTime) {
+    completion()
+  }
 }
 
 /// DEBUG模式下调试输出
