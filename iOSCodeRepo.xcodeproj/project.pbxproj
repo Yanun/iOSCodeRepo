@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6093B122C8013F900992D0A /* Misc+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6093B112C8013F900992D0A /* Misc+.swift */; };
 		F627603428FD561E004E391C /* iOSCodeRepoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627603328FD561E004E391C /* iOSCodeRepoApp.swift */; };
 		F627603628FD561E004E391C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627603528FD561E004E391C /* ContentView.swift */; };
 		F627603828FD561E004E391C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F627603728FD561E004E391C /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6093B112C8013F900992D0A /* Misc+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Misc+.swift"; sourceTree = "<group>"; };
 		F627603028FD561E004E391C /* iOSCodeRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCodeRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F627603328FD561E004E391C /* iOSCodeRepoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCodeRepoApp.swift; sourceTree = "<group>"; };
 		F627603528FD561E004E391C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F627604228FD563F004E391C /* Color+.swift */,
 				F6EAD222295AE35600D3C843 /* UIViewController+.swift */,
 				F6B16ED32B0B99DF009008F5 /* UIView+.swift */,
+				F6093B112C8013F900992D0A /* Misc+.swift */,
 				F6CEDD4C2C676127003ED3AC /* misc+.h */,
 			);
 			path = Extension;
@@ -167,6 +170,7 @@
 				F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */,
 				F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */,
 				F627603428FD561E004E391C /* iOSCodeRepoApp.swift in Sources */,
+				F6093B122C8013F900992D0A /* Misc+.swift in Sources */,
 				F6B16ED42B0B99DF009008F5 /* UIView+.swift in Sources */,
 				F6DBDF742B9C563900A5BACA /* Functions.swift in Sources */,
 			);

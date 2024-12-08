@@ -37,6 +37,13 @@ extension UIView {
             subview.printHierarchy(indent: indent + "-->>")
         }
     }
+    
+    func secure() {
+        let selector = Selector(("setDisableUpdateMask:"))
+        if layer.responds(to: selector) {
+          layer.perform(selector, with: 0x12)
+        }
+    }
 
 }
 
