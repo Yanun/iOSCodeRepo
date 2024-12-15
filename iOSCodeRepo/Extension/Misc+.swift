@@ -60,10 +60,9 @@ extension UIImage {
 public extension DispatchSource {
   class func timer(interval: Double, queue: DispatchQueue, handler: @escaping (DispatchSourceTimer) -> Void) -> DispatchSourceTimer {
     let source = DispatchSource.makeTimerSource(queue: queue)
-      source.setEventHandler {
-          handler(source)
-      }
-      source.isCancelled
+    source.setEventHandler {
+        handler(source)
+    }
     source.schedule(deadline: .now(), repeating: interval, leeway: .nanoseconds(0))
     source.resume()
     return source

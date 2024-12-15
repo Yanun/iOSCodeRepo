@@ -13,6 +13,7 @@
 		F627603828FD561E004E391C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F627603728FD561E004E391C /* Assets.xcassets */; };
 		F627603B28FD561E004E391C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F627603A28FD561E004E391C /* Preview Assets.xcassets */; };
 		F627604328FD563F004E391C /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627604228FD563F004E391C /* Color+.swift */; };
+		F678174C2D0EA21C00EBC550 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678174B2D0EA21C00EBC550 /* Cache.swift */; };
 		F6B16ED42B0B99DF009008F5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B16ED32B0B99DF009008F5 /* UIView+.swift */; };
 		F6DBDF742B9C563900A5BACA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF732B9C563900A5BACA /* Functions.swift */; };
 		F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */; };
@@ -27,6 +28,7 @@
 		F627603728FD561E004E391C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F627603A28FD561E004E391C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F627604228FD563F004E391C /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		F678174B2D0EA21C00EBC550 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F6B16ED32B0B99DF009008F5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		F6CEDD4C2C676127003ED3AC /* misc+.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "misc+.h"; sourceTree = "<group>"; };
 		F6DBDF732B9C563900A5BACA /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				F627603528FD561E004E391C /* ContentView.swift */,
 				F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */,
 				F6DBDF732B9C563900A5BACA /* Functions.swift */,
+				F678174B2D0EA21C00EBC550 /* Cache.swift */,
 				F627604128FD562F004E391C /* Extension */,
 				F627603728FD561E004E391C /* Assets.xcassets */,
 				F627603928FD561E004E391C /* Preview Content */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F627603628FD561E004E391C /* ContentView.swift in Sources */,
+				F678174C2D0EA21C00EBC550 /* Cache.swift in Sources */,
 				F627604328FD563F004E391C /* Color+.swift in Sources */,
 				F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */,
 				F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */,
