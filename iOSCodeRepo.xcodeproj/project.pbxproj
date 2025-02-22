@@ -18,6 +18,16 @@
 		F6DBDF742B9C563900A5BACA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF732B9C563900A5BACA /* Functions.swift */; };
 		F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */; };
 		F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAD222295AE35600D3C843 /* UIViewController+.swift */; };
+		F6F541332D69DAC0000D51A5 /* Result+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5412F2D69DAC0000D51A5 /* Result+.swift */; };
+		F6F541342D69DAC0000D51A5 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F541312D69DAC0000D51A5 /* View+.swift */; };
+		F6F541352D69DAC0000D51A5 /* Task+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F541322D69DAC0000D51A5 /* Task+.swift */; };
+		F6F541362D69DAC0000D51A5 /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5412E2D69DAC0000D51A5 /* Sequence+.swift */; };
+		F6F541372D69DAC0000D51A5 /* combine+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F541302D69DAC0000D51A5 /* combine+.swift */; };
+		F6F5413D2D69DAEC000D51A5 /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5413A2D69DAEC000D51A5 /* Reference.swift */; };
+		F6F5413E2D69DAEC000D51A5 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5413B2D69DAEC000D51A5 /* Predicate.swift */; };
+		F6F5413F2D69DAEC000D51A5 /* OperationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F541382D69DAEC000D51A5 /* OperationTask.swift */; };
+		F6F541402D69DAEC000D51A5 /* AsyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5413C2D69DAEC000D51A5 /* AsyncContentView.swift */; };
+		F6F541412D69DAEC000D51A5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F541392D69DAEC000D51A5 /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +44,16 @@
 		F6DBDF732B9C563900A5BACA /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		F6EAD222295AE35600D3C843 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		F6F5412E2D69DAC0000D51A5 /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
+		F6F5412F2D69DAC0000D51A5 /* Result+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+.swift"; sourceTree = "<group>"; };
+		F6F541302D69DAC0000D51A5 /* combine+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "combine+.swift"; sourceTree = "<group>"; };
+		F6F541312D69DAC0000D51A5 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		F6F541322D69DAC0000D51A5 /* Task+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+.swift"; sourceTree = "<group>"; };
+		F6F541382D69DAEC000D51A5 /* OperationTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTask.swift; sourceTree = "<group>"; };
+		F6F541392D69DAEC000D51A5 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		F6F5413A2D69DAEC000D51A5 /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		F6F5413B2D69DAEC000D51A5 /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		F6F5413C2D69DAEC000D51A5 /* AsyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +91,11 @@
 				F6DBDF752B9C58FC00A5BACA /* RegexHelper.swift */,
 				F6DBDF732B9C563900A5BACA /* Functions.swift */,
 				F678174B2D0EA21C00EBC550 /* Cache.swift */,
+				F6F541382D69DAEC000D51A5 /* OperationTask.swift */,
+				F6F541392D69DAEC000D51A5 /* List.swift */,
+				F6F5413A2D69DAEC000D51A5 /* Reference.swift */,
+				F6F5413B2D69DAEC000D51A5 /* Predicate.swift */,
+				F6F5413C2D69DAEC000D51A5 /* AsyncContentView.swift */,
 				F627604128FD562F004E391C /* Extension */,
 				F627603728FD561E004E391C /* Assets.xcassets */,
 				F627603928FD561E004E391C /* Preview Content */,
@@ -89,6 +114,11 @@
 		F627604128FD562F004E391C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F6F5412E2D69DAC0000D51A5 /* Sequence+.swift */,
+				F6F5412F2D69DAC0000D51A5 /* Result+.swift */,
+				F6F541302D69DAC0000D51A5 /* combine+.swift */,
+				F6F541312D69DAC0000D51A5 /* View+.swift */,
+				F6F541322D69DAC0000D51A5 /* Task+.swift */,
 				F627604228FD563F004E391C /* Color+.swift */,
 				F6EAD222295AE35600D3C843 /* UIViewController+.swift */,
 				F6B16ED32B0B99DF009008F5 /* UIView+.swift */,
@@ -168,9 +198,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F5413D2D69DAEC000D51A5 /* Reference.swift in Sources */,
+				F6F5413E2D69DAEC000D51A5 /* Predicate.swift in Sources */,
+				F6F5413F2D69DAEC000D51A5 /* OperationTask.swift in Sources */,
+				F6F541402D69DAEC000D51A5 /* AsyncContentView.swift in Sources */,
+				F6F541412D69DAEC000D51A5 /* List.swift in Sources */,
 				F627603628FD561E004E391C /* ContentView.swift in Sources */,
 				F678174C2D0EA21C00EBC550 /* Cache.swift in Sources */,
 				F627604328FD563F004E391C /* Color+.swift in Sources */,
+				F6F541332D69DAC0000D51A5 /* Result+.swift in Sources */,
+				F6F541342D69DAC0000D51A5 /* View+.swift in Sources */,
+				F6F541352D69DAC0000D51A5 /* Task+.swift in Sources */,
+				F6F541362D69DAC0000D51A5 /* Sequence+.swift in Sources */,
+				F6F541372D69DAC0000D51A5 /* combine+.swift in Sources */,
 				F6DBDF762B9C58FC00A5BACA /* RegexHelper.swift in Sources */,
 				F6EAD223295AE35600D3C843 /* UIViewController+.swift in Sources */,
 				F627603428FD561E004E391C /* iOSCodeRepoApp.swift in Sources */,
