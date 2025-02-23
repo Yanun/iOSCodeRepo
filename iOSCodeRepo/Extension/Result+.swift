@@ -8,7 +8,7 @@
 import Foundation
 
 extension Result {
-    var value: Success {
-        get throws { try get() }
-    }
+  var value: Success {
+    get throws { try get() }
+  }
 }

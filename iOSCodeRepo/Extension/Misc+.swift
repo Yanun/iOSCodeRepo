@@ -45,9 +45,10 @@ extension UIImage {
     let scaledRect = CGRect(
       x: (newSize.width - width) / 2.0,
       y: (newSize.height - height) / 2.0,
-      width: width, height: height)
+      width: width, height: height
+    )
 
-    UIGraphicsBeginImageContextWithOptions(scaledRect.size, false, 0.0);
+    UIGraphicsBeginImageContextWithOptions(scaledRect.size, false, 0.0)
     defer { UIGraphicsEndImageContext() }
 
     draw(in: scaledRect)
@@ -56,12 +57,11 @@ extension UIImage {
   }
 }
 
-
 public extension DispatchSource {
   class func timer(interval: Double, queue: DispatchQueue, handler: @escaping (DispatchSourceTimer) -> Void) -> DispatchSourceTimer {
     let source = DispatchSource.makeTimerSource(queue: queue)
     source.setEventHandler {
-        handler(source)
+      handler(source)
     }
     source.schedule(deadline: .now(), repeating: interval, leeway: .nanoseconds(0))
     source.resume()
@@ -69,121 +69,117 @@ public extension DispatchSource {
   }
 }
 
-
 extension Decodable where Self: Identifiable {
-    
-    mutating func loadFromCache(using decoder: JSONDecoder = .init()) throws {
-        let folderURLs = FileManager.default.urls(
-            for: .cachesDirectory,
-            in: .userDomainMask
-        )
+  mutating func loadFromCache(using decoder: JSONDecoder = .init()) throws {
+    let folderURLs = FileManager.default.urls(
+      for: .cachesDirectory,
+      in: .userDomainMask
+    )
 
-        let typeName = String(describing: Self.self)
-        let fileName = "\(typeName)-\(id).cache"
-        let fileURL = folderURLs[0].appendingPathComponent(fileName)
-        let data = try Data(contentsOf: fileURL)
-        self = try JSONDecoder().decode(Self.self, from: data)
-    }
-    
+    let typeName = String(describing: Self.self)
+    let fileName = "\(typeName)-\(id).cache"
+    let fileURL = folderURLs[0].appendingPathComponent(fileName)
+    let data = try Data(contentsOf: fileURL)
+    self = try JSONDecoder().decode(Self.self, from: data)
+  }
 }
 
 extension Encodable where Self: Identifiable {
-    // We also take this opportunity to parameterize our JSON
-    // encoder, to enable the users of our new API to pass in
-    // a custom encoder, and to make our method's dependencies
-    // more clear:
-    func cacheOnDisk(using encoder: JSONEncoder = .init()) throws {
-        let folderURLs = FileManager.default.urls(
-            for: .cachesDirectory,
-            in: .userDomainMask
-        )
+  // We also take this opportunity to parameterize our JSON
+  // encoder, to enable the users of our new API to pass in
+  // a custom encoder, and to make our method's dependencies
+  // more clear:
+  func cacheOnDisk(using encoder: JSONEncoder = .init()) throws {
+    let folderURLs = FileManager.default.urls(
+      for: .cachesDirectory,
+      in: .userDomainMask
+    )
 
-        // Rather than hard-coding a specific type's name here,
-        // we instead dynamically resolve a description of the
-        // type that our method is currently being called on:
-        let typeName = String(describing: Self.self)
-        let fileName = "\(typeName)-\(id).cache"
-        let fileURL = folderURLs[0].appendingPathComponent(fileName)
-        let data = try encoder.encode(self)
-        try data.write(to: fileURL)
-    }
+    // Rather than hard-coding a specific type's name here,
+    // we instead dynamically resolve a description of the
+    // type that our method is currently being called on:
+    let typeName = String(describing: Self.self)
+    let fileName = "\(typeName)-\(id).cache"
+    let fileURL = folderURLs[0].appendingPathComponent(fileName)
+    let data = try encoder.encode(self)
+    try data.write(to: fileURL)
+  }
 }
 
 extension String {
-    func tokenize(using handlers: [Character : (String) -> Void]) {
-        // We no longer have to maintain an array of symbols,
-        // but we do need to keep track of both any currently
-        // parsed symbol, as well as which handler its for.
-        var parsingData: (symbol: String, handler: (String) -> Void)?
+  func tokenize(using handlers: [Character: (String) -> Void]) {
+    // We no longer have to maintain an array of symbols,
+    // but we do need to keep track of both any currently
+    // parsed symbol, as well as which handler its for.
+    var parsingData: (symbol: String, handler: (String) -> Void)?
 
-        func parse(_ character: Character) {
-            if var data = parsingData {
-                guard character.isLetter else {
-                    if !data.symbol.isEmpty {
-                        data.handler(data.symbol)
-                    }
+    func parse(_ character: Character) {
+      if var data = parsingData {
+        guard character.isLetter else {
+          if !data.symbol.isEmpty {
+            data.handler(data.symbol)
+          }
 
-                    parsingData = nil
-                    return parse(character)
-                }
-
-                data.symbol.append(character)
-                parsingData = data
-            } else {
-                // If we have a handler for a given character,
-                // then we’ll parse it.
-                guard let handler = handlers[character] else {
-                    return
-                }
-
-                parsingData = ("", handler)
-            }
+          parsingData = nil
+          return parse(character)
         }
 
-        forEach(parse)
-
-        if let lastData = parsingData, !lastData.symbol.isEmpty {
-            lastData.handler(lastData.symbol)
+        data.symbol.append(character)
+        parsingData = data
+      } else {
+        // If we have a handler for a given character,
+        // then we’ll parse it.
+        guard let handler = handlers[character] else {
+          return
         }
+
+        parsingData = ("", handler)
+      }
     }
+
+    forEach(parse)
+
+    if let lastData = parsingData, !lastData.symbol.isEmpty {
+      lastData.handler(lastData.symbol)
+    }
+  }
 }
 
 protocol AnyDecoder {
-    func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T
+  func decode<T: Decodable>(_ type: T.Type, from data: Data) throws -> T
 }
 
 extension JSONDecoder: AnyDecoder {}
 extension PropertyListDecoder: AnyDecoder {}
 
 extension Data {
-    func decoded<T: Decodable>(using decoder: AnyDecoder = JSONDecoder()) throws -> T {
-        return try decoder.decode(T.self, from: self)
-    }
+  func decoded<T: Decodable>(using decoder: AnyDecoder = JSONDecoder()) throws -> T {
+    return try decoder.decode(T.self, from: self)
+  }
 }
 
 protocol AnyEncoder {
-    func encode<T: Encodable>(_ value: T) throws -> Data
+  func encode<T: Encodable>(_ value: T) throws -> Data
 }
 
 extension JSONEncoder: AnyEncoder {}
 extension PropertyListEncoder: AnyEncoder {}
 
 extension Encodable {
-    func encoded(using encoder: AnyEncoder = JSONEncoder()) throws -> Data {
-        return try encoder.encode(self)
-    }
+  func encoded(using encoder: AnyEncoder = JSONEncoder()) throws -> Data {
+    return try encoder.encode(self)
+  }
 }
 
 extension KeyedDecodingContainerProtocol {
-    func decode<T: Decodable>(forKey key: Key) throws -> T {
-        return try decode(T.self, forKey: key)
-    }
+  func decode<T: Decodable>(forKey key: Key) throws -> T {
+    return try self.decode(T.self, forKey: key)
+  }
 
-    func decode<T: Decodable>(
-        forKey key: Key,
-        default defaultExpression: @autoclosure () -> T
-    ) throws -> T {
-        return try decodeIfPresent(T.self, forKey: key) ?? defaultExpression()
-    }
+  func decode<T: Decodable>(
+    forKey key: Key,
+    default defaultExpression: @autoclosure () -> T
+  ) throws -> T {
+    return try decodeIfPresent(T.self, forKey: key) ?? defaultExpression()
+  }
 }
-
